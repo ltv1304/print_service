@@ -1,0 +1,5 @@
+main.container
+  = link_to sanitize("&larr; Back to templates"), polymorphic_path(::Template)
+  .header
+    h1
+      = @resourse.name

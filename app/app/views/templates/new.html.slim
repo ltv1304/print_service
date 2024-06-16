@@ -1,0 +1,6 @@
+main.container
+  = link_to sanitize("&larr; Back to templates"), polymorphic_path(::Template)
+  .header
+    h1 New template
+  = turbo_frame_tag @resourse do
+    = render "form", resourse: @resourse

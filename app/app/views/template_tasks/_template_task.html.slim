@@ -1,0 +1,6 @@
+= turbo_frame_tag resourse do
+  .card.template
+    .card-body.d-flex.flex-row
+      = link_to resourse.name, polymorphic_path(resourse), data: { turbo_frame: "_top" }, class: 'align-self-center template__link'
+      .ms-auto
+        = button_to "Delete", polymorphic_path(resourse), method: :delete, class: "btn btn-extra--light"

@@ -1,0 +1,11 @@
+= form_for resourse, html: { class: "template form" } do |f|
+  - if resourse.errors.any?
+    .error-message
+      = resourse.errors.full_messages.to_sentence.capitalize
+  = f.fields_for :sources do |fs|
+    .form-field
+      = fs.label :file, class: 'form-label'
+      = fs.file_field :file, input_html: { autofocus: true }, class: 'form-control'
+  .d-grid.gap-2.d-md-flex.justify-content-md-end.my-2
+    = link_to "Cancel", polymorphic_path(Task), class: "btn btn-extra--light"
+    = f.submit class: "btn btn-extra--secondary"

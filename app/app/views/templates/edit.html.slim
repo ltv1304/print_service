@@ -1,0 +1,6 @@
+main.container
+  = link_to sanitize("&larr; Back to template"), polymorphic_path(@resourse)
+  .header
+    h1 Edit template
+  = turbo_frame_tag @resourse do
+    = render "form", resourse: @resourse

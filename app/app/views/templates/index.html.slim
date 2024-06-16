@@ -1,0 +1,11 @@
+= turbo_stream_from "templates"
+main.container
+  = turbo_frame_tag "first_turbo_frame" do
+    .header
+      h1 Templates
+    .d-grid.gap-2.d-md-flex.justify-content-md-end
+      = link_to "New template", new_template_path, data: { turbo_frame: dom_id(::Template.new) }, class: "btn btn-lg mb-3 me-md-2 btn-extra--primary"
+  = turbo_frame_tag ::Template.new
+  = turbo_frame_tag "templates" do
+    - @resourses.each do |resourse|
+      = render 'template', resourse: resourse

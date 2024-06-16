@@ -1,0 +1,13 @@
+= form_for resourse, html: { class: "template form" } do |f|
+  - if resourse.errors.any?
+    .error-message
+      = resourse.errors.full_messages.to_sentence.capitalize
+  .form-field
+    = f.label :template_id, class: 'form-label'
+    = f.select :template_id, options_for_select(templates_for_select), {}, class: 'form-control'
+  .form-field
+    = f.label :params, class: 'form-label'
+    = f.text_area :params, class: 'form-control'
+  .d-grid.gap-2.d-md-flex.justify-content-md-end.my-2
+    = link_to "Cancel", polymorphic_path(TemplateTask), class: "btn btn-extra--light", style: "padding_right: 1rem"
+    = f.submit class: "btn btn-extra--secondary"

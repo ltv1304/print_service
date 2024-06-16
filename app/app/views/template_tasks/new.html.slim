@@ -1,0 +1,6 @@
+main.container
+  = link_to sanitize("&larr; Back to template tasks"), polymorphic_path(TemplateTask)
+  .header
+    h1 New template task
+  = turbo_frame_tag @resourse do
+    = render "form", resourse: @resourse

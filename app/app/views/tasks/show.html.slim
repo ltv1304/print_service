@@ -1,0 +1,20 @@
+main.container
+  = link_to sanitize("&larr; Back to tasks"), polymorphic_path(Task)
+  .header
+    h1
+      = @resourse.name
+  div
+    ul 
+      - @resourse.sources.each do |source|
+        li 
+          = link_to "Download source file", rails_blob_path(source.file, only_path: true)
+  div
+    ul 
+      - @resourse.results.each do |result|
+        li 
+          = link_to "Download result file", rails_blob_path(result.file, only_path: true)
+  div
+    ul 
+      - @resourse.artifacts.each do |artifact|
+        li 
+          = link_to "Download artifacts file", rails_blob_path(artifact.file, only_path: true)

@@ -1,0 +1,14 @@
+main.container
+  = link_to sanitize("&larr; Back to tasks"), polymorphic_path(TemplateTask)
+  .header
+    h1
+      = @resourse.name
+  div
+    - if @resourse.task.result.presence
+      = link_to "Download source file", rails_blob_path(@resourse.task.source, only_path: true)
+  div
+    - if @resourse.task.result.presence
+      = link_to "Download result file", rails_blob_path(@resourse.task.result, only_path: true)
+  div
+    - if @resourse.task.artifacts.presence
+      = link_to "Download artifacts file", rails_blob_path(@resourse.task.artifacts, only_path: true)

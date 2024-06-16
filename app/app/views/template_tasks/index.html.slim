@@ -1,0 +1,11 @@
+= turbo_stream_from "template_tasks"
+main.container
+  = turbo_frame_tag "first_turbo_frame" do
+    .header
+      h1 Template tasks
+    .d-grid.gap-2.d-md-flex.justify-content-md-end
+      = link_to "New template task", new_polymorphic_path(TemplateTask), data: { turbo_frame: dom_id(TemplateTask.new) }, class: "btn btn-lg mb-3 me-md-2 btn-extra--primary"
+  = turbo_frame_tag TemplateTask.new
+  = turbo_frame_tag "template_tasks" do
+    - @resourses.each do |resourse|
+      = render 'template_task', resourse: resourse

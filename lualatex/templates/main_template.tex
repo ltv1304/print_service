@@ -1,0 +1,17 @@
+\documentclass[12pt]{article}
+\RequirePackage{polyglossia}
+\setotherlanguage{english}
+\setdefaultlanguage{russian}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Times New Roman}
+\newfontfamily\cyrillicfont{Times New Roman}[Script=Cyrillic]
+
+\begin{document}
+Hello world!
+
+МИР! ТРУД! МАЙ!
+
+Здравствуйте, <%= name %>
+Сегодня <%= Time.now.strftime('%A') %>
+\end{document}
