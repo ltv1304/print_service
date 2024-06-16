@@ -1,20 +1,24 @@
 # TODO
 
-This is the markdown todo file for project a.
+Требования к проекту
 
-## Content
+## Первоочередные
 
-Tasks related to new content.
+- [ ] доделать api
+- [ ] сделать документацию к api
+- [ ] добавить пропадание тостера (оформить тостеры)
 
-- [ ] Add readme file with newline #example
-  - [ ] Create Pull Request
 
-## Release
+## Вторая очередь
+- [ ] подключить DelayedJob
+- [ ] перейти на Postgresql
+- [ ] добавить возможность конвертирования в pdf из markdown и html
+- [ ] добавить gem burstflow
+- [ ] начать писать тесты
 
-- [x] Init project repository
-      http://github.com/todo-md/todo-md
-- [ ] Publish project on GitHub @janikvonrotz
+## Третья очередь
+- [ ] реаизовать возможность обработки нескольких файлов и zip-архивов
+- [ ] написать тесты
+- [ ] подумать над необходимостью авторизации пользователей
+- [ ] добавить CI
 
-# DONE
-
-- [x] Create GitHub organization todo-md
